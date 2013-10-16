@@ -1,0 +1,36 @@
+!!! 5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Starter Template for Bootstrap
+    link(href='/plugins/bootstrap3/css/bootstrap.css', rel='stylesheet')
+    
+    block pagecss
+      link(href='/app/css/starter-template.css', rel='stylesheet')
+
+  body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Project name Dashboard
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') Home
+            li
+              a(href='/logout') Log Out
+    .container
+  
+      block content
+      
+
+    block scripts
+      script(src='/plugins/js/jquery.js')
+      script(src='/plugins/bootstrap3/js/bootstrap.min.js')

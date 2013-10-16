@@ -1,0 +1,34 @@
+{
+  "author": "Third Santor <tlsantor@gmail.com>",
+  "name": "third-express-seed",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "server.js"
+  },
+  "dependencies": {
+    "express": "3.4.0",
+    "jade": "0.33.0",
+    "mongoose": "3.6.19",
+    "connect-mongo": "0.3.x",
+    "passport": "0.1.17",
+    "passport-local": "0.1.6",
+    "helmet": "0.1.0",
+    "bcrypt": "0.7.7",
+    "underscore": "1.5.2",
+    "underscore.string": "2.3.3",
+    "moment": "2.2.1",
+    "useragent": "2.0.7",
+    "async": "0.2.9",
+    "enumeration": "*",
+    "colors": "0.6.2"
+  },
+  "devDependencies": {
+    "expect.js": "*",
+    "mocha": "*",
+    "supertest": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
