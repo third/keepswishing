@@ -1,5 +1,6 @@
 var Middleware = require('./middleware')
   , pass = require('./pass')
+  , errors = require('./errors')
   , User = require('../app/controllers/user')
   , WebsiteIndex = require('../app/controllers/website/index')
   , DashboardIndex = require('../app/controllers/dashboard/index')
@@ -17,13 +18,6 @@ module.exports = function(app) {
 
 
   app.get('/admin', AdminIndex.show);
-
-
-
-  app.get('/user', function(req, res){
-    res.send(200, { name: 'third' });
-    //res.send(200, 'third');
-  });
 
 
   app.get('/', WebsiteIndex.show);
@@ -45,6 +39,6 @@ module.exports = function(app) {
 
 
   //default
-  app.get('*', Middleware.show404Page);
+  errors(app);
 
 }

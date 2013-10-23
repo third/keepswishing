@@ -21,7 +21,8 @@
     "useragent": "2.0.7",
     "async": "0.2.9",
     "enumeration": "*",
-    "colors": "0.6.2"
+    "colors": "0.6.2",
+    "forky": "0.0.2"
   },
   "devDependencies": {
     "expect.js": "*",

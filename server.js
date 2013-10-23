@@ -21,12 +21,12 @@ require('./config/db')(function(mongoose) {
 
 
  // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3333);
 app.set('views', __dirname + '/app//views');
 app.set('view engine', 'jade');
 app.enable('trust proxy');
 app.use(express.favicon());
-app.use(express.logger('dev'));
+//app.use(express.logger('dev'));
 //app.use(helmet.xframe());
 //app.use(helmet.iexss());
 //app.use(helmet.contentTypeOptions());
@@ -41,7 +41,7 @@ app.use(express.session({
   cookie: {httpOnly: true},
   store: new MongoStore({
     url: config.db
-  }),
+  })
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -53,13 +53,7 @@ app.use(passport.session());
 // });
 //
 
-//expose sessiont to views 
-// app.use(function (req, res, next) {
-//   res.locals.session = req.session;
-//   next();
-//});
 
- 
 app.use(express.static(__dirname + '/public', {maxAge: 60000}));  // 1min
 app.use(express.compress());
 app.use(app.router);
